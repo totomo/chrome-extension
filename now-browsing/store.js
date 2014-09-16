@@ -1,6 +1,20 @@
 chrome.contextMenus.create({
 	title: "Now Browsing",
 	onclick: function(info, tab){
-      copyToClipboard( "Now Browsing: " + tab.title + "- " + tab.url);
+      saveToClipboard( "Now Browsing: " + tab.title + "- " + tab.url);
 	}
 });
+
+function saveToClipboard(str) {
+    // copy 用に textareaを作る
+	var textArea = document.createElement("textarea");
+	textArea.style.cssText = "position:absolute;left:-100%";
+
+	document.body.appendChild(textArea);
+
+	textArea.value = str;
+	textArea.select();
+	document.execCommand("copy");
+
+	document.body.removeChild(textArea);
+}
