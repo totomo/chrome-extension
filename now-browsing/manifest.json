@@ -5,6 +5,6 @@
 	"description": "This plugin store page title and [Now browsing] which is appended on page title to clip board",
     "permissions": ["clipboardRead", "contextMenus"],
 	"background": {
-					"scripts": ["store.js"]
-				  }
+                      "scripts": ["store.js"]
+                      }
 }
