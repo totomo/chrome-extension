@@ -3,4 +3,8 @@
     "version": "1.0.0",
 	"manifest_version": 2,
 	"description": "This plugin store page title and [Now browsing] which is appended on page title to clip board",
+    "permissions": ["contextMenus", "tabs", "http://*/*", "https://*/*"],
+	"background": {
+					"scripts": ["store.js"]
+				  }
 }
