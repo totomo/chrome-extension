@@ -1,6 +1,5 @@
 chrome.contextMenus.create({
 	title: "Now Browsing",
-	contexts : ["selection"],
 	onclick: function(info, tab){
       saveToClipboard( "Now Browsing: " + tab.title + "- " + tab.url);
 	}
